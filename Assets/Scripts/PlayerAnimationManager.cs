@@ -20,7 +20,7 @@ public class PlayerAnimationManager : MonoBehaviour
         return;
       }
 
-      animator.SetFloat("CharacterSpeed", rb.velocity.magnitude);
+      animator.SetFloat("CharacterSpeed", rb.linearVelocity.magnitude);
       animator.SetBool("IsFalling",!movement.IsGrounded);
       if (Input.GetButtonUp("Fire1"))
       {
